@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbfystimdqcfa"]
+
+[ext_resource type="Script" uid="uid://csrqnrxt6421x" path="res://assets/scripts/toast.gd" id="1_k51d8"]
+[ext_resource type="Texture2D" uid="uid://ca3oxfd23ib70" path="res://assets/images/player.png" id="2_4iex2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkair"]
+atlas = ExtResource("2_4iex2")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bycar"]
+atlas = ExtResource("2_4iex2")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx06n"]
+atlas = ExtResource("2_4iex2")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k46ej"]
+atlas = ExtResource("2_4iex2")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c2kld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkair")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bycar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx06n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k46ej")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljb8k"]
+
+[node name="Toast" type="CharacterBody2D"]
+script = ExtResource("1_k51d8")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c2kld")
+frame = 3
+frame_progress = 0.40647906
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_ljb8k")
