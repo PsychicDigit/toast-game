@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://jv6l11vpfi5i"]
+
+[ext_resource type="Texture2D" uid="uid://cq7v44waum6lf" path="res://assets/images/pxArt.png" id="1_8ho6b"]
+[ext_resource type="PackedScene" uid="uid://efhinfd37cem" path="res://scenes/platform.tscn" id="1_c13y7"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="PxArt" type="Sprite2D" parent="."]
+position = Vector2(3036, -602.99994)
+scale = Vector2(3.305555, 3.3055553)
+texture = ExtResource("1_8ho6b")
+
+[node name="Platform" parent="." instance=ExtResource("1_c13y7")]
+script = null
+
+[node name="Platform2" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(160, 0)
+script = null
+
+[node name="Platform3" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(-96, -64)
+rotation = -1.5707964
+script = null
+
+[node name="Platform4" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(-32, -160)
+script = null
+
+[node name="Platform5" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(224, -142)
+rotation = -1.5707964
+script = null
+
+[node name="Platform6" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(64, -224)
+rotation = -1.5707964
+script = null
+
+[node name="Platform7" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(128, -320)
+script = null
+
+[node name="Platform8" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(320, 0)
+script = null
+
+[node name="Platform9" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(384, -96)
+rotation = -1.5707964
+script = null
+
+[node name="Platform10" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(480, -160)
+script = null
+
+[node name="Platform11" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(288, -320)
+script = null
+
+[node name="Platform12" parent="." instance=ExtResource("1_c13y7")]
+position = Vector2(448, -320)
+script = null

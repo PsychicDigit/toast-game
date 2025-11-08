@@ -1,16 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://efhinfd37cem"]
+[gd_scene load_steps=6 format=4 uid="uid://efhinfd37cem"]
 
-[ext_resource type="Texture2D" uid="uid://i2ijrjmy1er3" path="res://assets/images/texture.png" id="1_ba0x2"]
+[ext_resource type="Texture2D" uid="uid://gyph42apwub1" path="res://assets/images/pixil-frame-0 (4).png" id="1_ba0x2"]
+[ext_resource type="Script" uid="uid://cam2xkntjmoxn" path="res://scenes/platform.gd" id="1_nlgqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4t87"]
-size = Vector2(158, 20)
+size = Vector2(160, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlgqw"]
+texture = ExtResource("1_ba0x2")
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+0:1/next_alternative_id = 2
+0:1/0 = 0
+0:1/1 = 1
+
+[sub_resource type="TileSet" id="TileSet_507ja"]
+sources/4 = SubResource("TileSetAtlasSource_nlgqw")
 
 [node name="Platform" type="StaticBody2D"]
+script = ExtResource("1_nlgqw")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v4t87")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(7.584691e-06, -1.4901161e-07)
-scale = Vector2(6.5833344, 0.8333334)
-texture = ExtResource("1_ba0x2")
+[node name="Layer1" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD7////BAAAAAAAAQD7/wAABAAAAAEAAQD8/wAABAAAAAEAAQD8////BAAAAAEAAQD9////BAAAAAEAAQD9/wAABAAAAAAAAQD+/wAABAAAAAEAAQD+////BAAAAAAAAQD/////BAAAAAEAAQD//wAABAAAAAAAAQAAAAAABAAAAAAAAQAAAP//BAAAAAAAAQABAP//BAAAAAAAAQABAAAABAAAAAEAAQACAAAABAAAAAEAAQACAP//BAAAAAAAAQADAP//BAAAAAAAAQADAAAABAAAAAEAAQAEAAAABAAAAAEAAQAEAP//BAAAAAEAAQA=")
+tile_set = SubResource("TileSet_507ja")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
