@@ -1,12 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://efhinfd37cem"]
+[gd_scene load_steps=3 format=3 uid="uid://efhinfd37cem"]
+
+[ext_resource type="Texture2D" uid="uid://i2ijrjmy1er3" path="res://assets/images/texture.png" id="1_ba0x2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4t87"]
 size = Vector2(158, 20)
-
-[sub_resource type="Gradient" id="Gradient_ba0x2"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_nlgqw"]
-gradient = SubResource("Gradient_ba0x2")
 
 [node name="Platform" type="StaticBody2D"]
 
@@ -14,6 +11,6 @@ gradient = SubResource("Gradient_ba0x2")
 shape = SubResource("RectangleShape2D_v4t87")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(-4.172325e-07, -0.1249997)
-scale = Vector2(0.6171875, 20.25)
-texture = SubResource("GradientTexture1D_nlgqw")
+position = Vector2(7.584691e-06, -1.4901161e-07)
+scale = Vector2(6.5833344, 0.8333334)
+texture = ExtResource("1_ba0x2")

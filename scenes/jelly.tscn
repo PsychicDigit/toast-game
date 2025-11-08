@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2d5pfg01a4a2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5loe"]
+size = Vector2(20, 2)
+
+[sub_resource type="Gradient" id="Gradient_fq10y"]
+colors = PackedColorArray(0.36713773, 0.0008234169, 0.9724856, 1, 0.36862746, 0, 0.972549, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w2xux"]
+gradient = SubResource("Gradient_fq10y")
+width = 20
+
+[node name="Jelly" type="StaticBody2D"]
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p5loe")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(1, 6)
+texture = SubResource("GradientTexture1D_w2xux")

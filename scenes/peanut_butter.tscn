@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://du507v7jt3acg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfdlr"]
+size = Vector2(20, 2)
+
+[sub_resource type="Gradient" id="Gradient_n5fif"]
+colors = PackedColorArray(0.6666667, 0.23921569, 0, 1, 0.6666667, 0.23921569, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d20os"]
+gradient = SubResource("Gradient_n5fif")
+width = 20
+
+[node name="PeanutButter" type="StaticBody2D"]
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dfdlr")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -1.5)
+scale = Vector2(1, 5)
+texture = SubResource("GradientTexture1D_d20os")
