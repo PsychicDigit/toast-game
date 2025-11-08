@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://efhinfd37cem" path="res://scenes/platform.tscn" id="2_sugp2"]
 
 [node name="Main" type="Node2D"]
-position = Vector2(612, 382)
 
 [node name="Toast" parent="." instance=ExtResource("1_0wfyh")]
 position = Vector2(-1, -69)
