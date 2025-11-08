@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbfystimdqcfa"]
+[gd_scene load_steps=10 format=3 uid="uid://dbfystimdqcfa"]
 
 [ext_resource type="Script" uid="uid://csrqnrxt6421x" path="res://assets/scripts/toast.gd" id="1_k51d8"]
 [ext_resource type="Texture2D" uid="uid://ca3oxfd23ib70" path="res://assets/images/player.png" id="2_4iex2"]
+[ext_resource type="PackedScene" uid="uid://dq13ygep8wqeo" path="res://scenes/speadgun.tscn" id="3_4iex2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vkair"]
 atlas = ExtResource("2_4iex2")
@@ -52,3 +53,5 @@ frame_progress = 0.40647906
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_ljb8k")
+
+[node name="Speadgun" parent="." instance=ExtResource("3_4iex2")]

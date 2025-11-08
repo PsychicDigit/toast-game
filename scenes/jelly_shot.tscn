@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://8nu543b1g6go"]
+
+[ext_resource type="Texture2D" uid="uid://wg1f0vuurih2" path="res://assets/images/jellyShot.png" id="1_utn3v"]
+[ext_resource type="Script" uid="uid://dr0d4gs7hkl4d" path="res://assets/scripts/jellyShotScript.gd" id="2_g6jx0"]
+
+[node name="jellyShot" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_utn3v")
+script = ExtResource("2_g6jx0")

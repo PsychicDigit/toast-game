@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq13ygep8wqeo"]
+
+[ext_resource type="Texture2D" uid="uid://b8hgp7flyvjn8" path="res://assets/images/gun.png" id="1_xd0h3"]
+[ext_resource type="Script" uid="uid://ojwfyp65kwww" path="res://assets/scripts/speadGunScript.gd" id="2_14ixy"]
+
+[node name="Speadgun" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 0)
+scale = Vector2(-1.8587226, 1.4813365)
+texture = ExtResource("1_xd0h3")
+script = ExtResource("2_14ixy")
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D"]
+position = Vector2(-6.456047, -2.0251982)
