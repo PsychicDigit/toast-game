@@ -39,7 +39,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljb8k"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k51d8"]
+size = Vector2(24, 24)
 
 [node name="Toast" type="CharacterBody2D"]
 script = ExtResource("1_k51d8")
@@ -50,5 +51,4 @@ frame = 3
 frame_progress = 0.40647906
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource("RectangleShape2D_ljb8k")
+shape = SubResource("RectangleShape2D_k51d8")

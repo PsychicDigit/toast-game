@@ -1,12 +1,58 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbdbj3b64vepi"]
+[gd_scene load_steps=5 format=3 uid="uid://dbdbj3b64vepi"]
 
 [ext_resource type="PackedScene" uid="uid://dbfystimdqcfa" path="res://scenes/toast.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://efhinfd37cem" path="res://scenes/platform.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://2d5pfg01a4a2" path="res://scenes/jelly.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://du507v7jt3acg" path="res://scenes/peanut_butter.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Toast" parent="." instance=ExtResource("1_0wfyh")]
-position = Vector2(-1, -69)
+position = Vector2(559, 534)
 
-[node name="Platform" parent="." instance=ExtResource("2_sugp2")]
-position = Vector2(0, 10)
+[node name="Camera" type="Camera2D" parent="Toast"]
+offset = Vector2(0, -50)
+zoom = Vector2(1.5, 1.5)
+
+[node name="platforms" type="Node2D" parent="."]
+
+[node name="Platform1" parent="platforms" instance=ExtResource("2_sugp2")]
+position = Vector2(482, 562)
+scale = Vector2(4, 1)
+
+[node name="Platform2" parent="platforms" instance=ExtResource("2_sugp2")]
+position = Vector2(788, 410)
+rotation = 1.5707964
+scale = Vector2(1.8, 1)
+
+[node name="Platform3" parent="platforms" instance=ExtResource("2_sugp2")]
+position = Vector2(936, 258)
+scale = Vector2(2, 1)
+
+[node name="Platform4" parent="platforms" instance=ExtResource("2_sugp2")]
+position = Vector2(156, 394)
+rotation = 1.5707964
+scale = Vector2(2, 1)
+
+[node name="Platform5" parent="platforms" instance=ExtResource("2_sugp2")]
+position = Vector2(345, 236)
+rotation = 1.5707964
+scale = Vector2(2, 1)
+
+[node name="Platform6" parent="platforms" instance=ExtResource("2_sugp2")]
+position = Vector2(8, 226)
+scale = Vector2(2, 1)
+
+[node name="Jelly" parent="." instance=ExtResource("3_sugp2")]
+position = Vector2(621, 551)
+scale = Vector2(1.2, 1.2)
+
+[node name="PeanutButter" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(166, 419)
+rotation = 1.5707964
+scale = Vector2(9, 1)
+
+[node name="PeanutButter2" parent="." instance=ExtResource("4_jyhfs")]
+position = Vector2(333, 249)
+rotation = 1.5707964
+scale = Vector2(9, 1)
